@@ -53,11 +53,11 @@ Insérez trois accents grave (_backtick_) au début de la ligne (`ASCII : ALT + 
 
 - Exemple :
 
-```powershell
+```txt
     Get-ChildItem -Path C:\temp\code.txt 
 ```
 
-```bash
+```txt
     mkdir markdown
     touch markdown.md
 ```
@@ -79,7 +79,7 @@ Insérez un accent grave (`) avant et après la chaîne de caractères à surlig
 
 - Exemple :
 
-```markdown
+```txt
 `Ceci permet de surligner une chaîne de caractères`  
 ```
 
@@ -95,7 +95,7 @@ Ajoutez un carré (#) (_hashtag_) avant la chaîne caractères qui sera utilisé
 
 - Exemple :
 
-```markdown
+```
 # : En-tête niveau 1 
 ## : En-tête niveau 2
 ### : En-tête niveau 3
@@ -106,7 +106,7 @@ Ajoutez un carré (#) (_hashtag_) avant la chaîne caractères qui sera utilisé
 
 Ajoutez un signe égal (=) en dessous de la chaîne caractères qui sera utilisée comme en-tête (retour de chariot).
 
-```markdown
+```
 = : En-tête niveau 1 
 == : En-tête niveau 2
 === : En-tête niveau 3
@@ -123,12 +123,12 @@ Commencez la ligne avec un point d'exclamation (`!`) suivi d'une description ent
 
 - Exemple :
 
-```markdown
+```txt
  ![Markdown Logo](./markdown.jpg)
 ```
 
 - Rendu :
-- 
+  
  ![Markdown Logo](./markdown.png)
 
 #### Images du web
@@ -137,7 +137,7 @@ Il est également possible d'ajouter des images du web aussi, mais il peut y avo
 
 Le procédé est le même que pour une image interne. 
 
-> Le site [LightShot](https://app.prntscr.com/en/index.html)permet de faire des captures d'images et de les référencer directemnent en copiant le nouvel emplacement de l'image créée sur le site.
+> Le site [LightShot](https://app.prntscr.com/en/index.html) permet de faire des captures d'images et de les référencer directemnent en copiant le nouvel emplacement de l'image créée sur le site.
 
 ### Liens
 
@@ -149,13 +149,13 @@ Incérer une description entre crochets (`[ ]`) et ajouter l'emplacement du fich
 
 - Exemple :
 
-```markdown
+```
 [Document interne à lier](./Markdown/test.md)
 ```
 
 - Rendu :
 
-[Document interne à lier](./Markdown/test.md)
+- [Document interne à lier](./Markdown/test.md)
 
 #### Liens de référence
 
@@ -167,7 +167,7 @@ Ajouter la référence (lien vers une page web) après son numéro entre crochet
 
 - Exemple :
 
-```markdown
+```
 # Insertion des liens
 
 [1][1]
@@ -181,7 +181,7 @@ Ajouter la référence (lien vers une page web) après son numéro entre crochet
 [ref][2]
 ```
 
-```markdown
+```
 # Ajout des références au bas du document.
 
 [1]:https://google.com
@@ -189,15 +189,21 @@ Ajouter la référence (lien vers une page web) après son numéro entre crochet
 [3]:https://commvault.com
 ```
 
+- Exemple
+
+[^1]
+[^2]
+[^3]
+
 #### Liens web
 
 Les liens webs peuvent être insérés en ajoutant une description entre crochets (`[ ]`) suivie de l'URL du site web entre parenthèeses (`( )`).
 
-```markdown
+```
 [Site Web](https://site.web) : 
 ```
 
-[Google](https://google.com)
+- [Google](https://google.com)
 
 #### Liens web direct
 
@@ -215,7 +221,9 @@ Insérez trois tirets au début d'une ligne `---` et une ligne horizontale appar
 
 - Exemple :
 
-```---```
+```
+---
+```
 
 - Rendu :
 
@@ -225,7 +233,11 @@ Insérez trois tirets au début d'une ligne `---` et une ligne horizontale appar
 
 Utiliser la barre oblique inversée (_backslash_) comme caractère d'échappement avant un caractère réservé comme un accent grave (\`).
 
-` \` `
+```
+` \` 
+```
+
+` \*` 
 
 ### Listes
 
@@ -241,12 +253,16 @@ Insérez un tiret au début d'une ligne et poursuivre avec la chaîne de caract�
 -
 -
 -
+ -
+ -
 ```
 
 - Rendu :
-
 -
 -
+-
+ -
+ -
 
 #### Listes numérotées
 
@@ -274,7 +290,13 @@ Insérez un tiret bas (_underscore_) (_ _) au début et à la fin de la chaîne 
 
 > Il est également possible d'utiliser un astérisque `*` au lieu du tiret.
 
-- Exemple : ``` __ABC__  ```
+```
+__ABC__
+```
+
+```
+**ABC**
+```
 
 - Rendu : __ABC__ 
 
@@ -284,7 +306,13 @@ Insérez un double tiret bas (_underscore_) (__ __) au début et à la fin de la
 
 > Il est également possible d'utiliser un astérisque `*` au lieu du tiret.
 
-- Exemple : ``` _ABC_  ``` 
+```
+_ABC_
+```
+
+```
+*ABC*
+```
 
 - Rendu : _ABC_
 
@@ -300,7 +328,7 @@ Il n'est pas nécessaire de fermer le dernier élément avec une barre verticale
 
 - Exemple :
 
-```markdown
+```
 Colonne 1 | Colonne 2 | Colonne 3
 --------- | --------- |---------
 Contenu 1 | Contenu 2 | Contenu 3
@@ -320,7 +348,7 @@ La fonctionnalité "table des matières" (`TOC`) n'est pas supportée par tous l
 
 Pour l'utiliser, ajouter `_TOC_` enter tirets bas à l'intérieur d'une paire de crochets (`[[ ]]`).
 
-```markdown
+```
 [[_TOC_]] 
 ```
 
@@ -351,4 +379,8 @@ Ajouter un carré immédiatement après le lien du fichier et ajouter le nom de 
 - [markdownguide.org](https://www.markdownguide.org/tools/)
 - [StackEdit Online Markdown Editor](https://stackedit.io/)
 
-[1]:https://google.com
+## Références
+
+[^1]:https://google.com
+[^2]:https://microsoft.com
+[^3]:https://commvault.com
