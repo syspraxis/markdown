@@ -9,8 +9,6 @@ La plupart des éditeurs de texte supportent le Markdown soit nativement ou via 
 
 Dans un éditeur de texte, le Markdown comprend généralement une section _Contents_ pour écrire le code et une section _Preview_ pour obtenir le rendu d'une page.
 
-![preview](./medias/markdown.preview.2.png)
-
 ## Extension
 
 L'extension d'un fichier markdown est `.md`.
@@ -56,25 +54,23 @@ Insérez trois accents grave (_backtick_) au début de la ligne (`ASCII : ALT + 
 - Exemple :
 
 ```powershell
-  Get-ChildItem -Path C:\temp\code.txt 
+    Get-ChildItem -Path C:\temp\code.txt 
 ```
 
 ```bash
-  mkdir markdown
-  touch markdown.md
+    mkdir markdown
+    touch markdown.md
 ```
 
 - Rendu :
 
 ```powershell
-    # Commentaire en PowerShell
-
     Get-ChildItem -Path C:\temp\code.txt 
 ```
 
 ```bash
-mkdir markdown
-touch markdown.md
+    mkdir markdown
+    touch markdown.md
 ```
 
 ### Chaîne de caractères surlignée
@@ -115,12 +111,6 @@ Ajoutez un signe égal (=) en dessous de la chaîne caractères qui sera utilis�
 == : En-tête niveau 2
 === : En-tête niveau 3
 ==== : En-têter niveau 4 
-
-Équivalent en HTML :
-
-```HTML
-<!-- HTML -->
-<h1 id= </h1>
 ```
 
 ### Images
@@ -134,12 +124,12 @@ Commencez la ligne avec un point d'exclamation (`!`) suivi d'une description ent
 - Exemple :
 
 ```markdown
- ![Markdown Logo](./medias/markdown.logo.1.jpg)
+ ![Markdown Logo](./markdown.jpg)
 ```
 
 - Rendu :
-
- ![Markdown Logo](./medias/markdown.logo.1.jpg)
+- 
+ ![Markdown Logo](./markdown.png)
 
 #### Images du web
 
