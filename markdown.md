@@ -1,6 +1,6 @@
 # Markdown
 
-Cette documentation présente les techniques de base pour écrire en Markdown, un langage de balisage léger (_lightweight markup language_) qui offre une syntaxe facile à lire, à écrire et à analyser (_to parse_) par d'autres programmes. Le Mardown est souvent utilisé pour la documentation technique, notamment pour écrire des fichiers `README.md` qui décrivent le fonctionnement du code source d'un programme.
+Cette documentation présente la syntaxe de base pour écrire en Markdown, un langage de balisage léger (_lightweight markup language_) qui offre une syntaxe facile à lire, à écrire et à analyser (_to parse_) par d'autres programmes. Le Mardown est souvent utilisé pour la documentation technique, notamment pour écrire des fichiers `README.md` qui décrivent le fonctionnement du code source d'un programme.
 
 La plupart des éditeurs de texte supportent le Markdown soit nativement ou via une extension.
 
@@ -13,6 +13,8 @@ Dans un éditeur de texte ou une plateforme web d'hébergement de code source co
 L'extension d'un fichier markdown est `.md`.
 
 ## Syntaxe
+
+Les éléments de syntaxe qui suivent sont présentés en ordre alphabétique.
 
 ### Blocs de citation
 
