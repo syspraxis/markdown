@@ -1,13 +1,12 @@
 # Markdown
 
-Cette documentation présente les techniques de base pour écrire en Markdown, un langage de balisage léger (_lightweight markup language_) qui offre une syntaxe facile à lire, à écrire et à analyser (_to parse_) par d'autres programmes. 
-Le Mardown est souvent utilisé pour la documentation technique, notamment pour écrire des fichiers `README.md` qui décrivent le fonctionnement du code source d'un programme.
+Cette documentation présente les techniques de base pour écrire en Markdown, un langage de balisage léger (_lightweight markup language_) qui offre une syntaxe facile à lire, à écrire et à analyser (_to parse_) par d'autres programmes. Le Mardown est souvent utilisé pour la documentation technique, notamment pour écrire des fichiers `README.md` qui décrivent le fonctionnement du code source d'un programme.
 
 La plupart des éditeurs de texte supportent le Markdown soit nativement ou via une extension.
 
 ## Fonctionnement
 
-Dans un éditeur de texte, le Markdown comprend généralement une section _Contents_ pour écrire le code et une section _Preview_ pour obtenir le rendu d'une page.
+Dans un éditeur de texte ou une plateforme web d'hébergement de code source comme GitHub ou GitLab, le Markdown comprend généralement une section _Contents_ pour écrire le code et une section _Preview_ pour obtenir le rendu d'une page.
 
 ## Extension
 
@@ -19,7 +18,7 @@ L'extension d'un fichier markdown est `.md`.
 
 #### Blocs de citation simples
 
-Commencez la ligne avec un signe de comparaison "plus grand que", ce qui va créer un bloc de citation indenté.
+Commencez la ligne avec un signe de comparaison "plus grand que" __(<)__, ce qui va créer un bloc de citation indenté.
 
 - Exemple :
 
