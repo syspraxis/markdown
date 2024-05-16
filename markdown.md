@@ -16,11 +16,15 @@ L'extension d'un fichier markdown est `.md`.
 
 Les éléments de syntaxe qui suivent sont présentés en ordre alphabétique.
 
+Pour consulter la table des matières, appuyez sur l'icône suivante, en haut à droite de cette page :
+
+ ![Markdown Logo](/media/toc.png)
+
 ### Blocs de citation
 
 #### Blocs de citation simples
 
-Commencez la ligne avec un signe de comparaison "plus grand que" __(<)__, ce qui va créer un bloc de citation indenté.
+Commencez la ligne avec un signe de comparaison "plus grand que" (`>`), ce qui va créer un bloc de citation indenté.
 
 - Exemple :
 
@@ -34,7 +38,7 @@ Commencez la ligne avec un signe de comparaison "plus grand que" __(<)__, ce qui
 
 #### Blocs de citation imbriqués
 
-À l'intérieur d'une citation, commencez une ligne avec une indentation (`tab`) et deux signes de comparaison "plus grand que", Ce qui va créer un second bloc de citation indenté et imbriqué.
+À l'intérieur d'une citation, commencez une ligne avec une indentation (`tab`) et deux signes de comparaison "plus grand que" (`>>`), ce qui va créer un second bloc de citation indenté et imbriqué.
 
 - Exemple :
 
@@ -55,28 +59,26 @@ Insérez trois accents grave (_backtick_) au début de la ligne (`ASCII : ALT + 
 - Exemple :
 
 ```txt
-    Get-ChildItem -Path C:\temp\code.txt 
+Get-ChildItem -Path C:\temp\code.txt 
 ```
 
 ```txt
-    mkdir markdown
-    touch markdown.md
+echo "Hello world !"
 ```
 
 - Rendu :
 
-```powershell
-    Get-ChildItem -Path C:\temp\code.txt 
+```pwsh
+Get-ChildItem -Path C:\temp\code.txt 
 ```
 
 ```bash
-    mkdir markdown
-    touch markdown.md
+echo "Hello world !"
 ```
 
 ### Chaîne de caractères surlignée
 
-Insérez un accent grave (`) avant et après la chaîne de caractères à surligner.
+Insérez un accent grave __( \` )__ avant et après la chaîne de caractères à surligner.
 
 - Exemple :
 
@@ -92,7 +94,7 @@ Insérez un accent grave (`) avant et après la chaîne de caractères à surlig
 
 #### Méthode 1
 
-Ajoutez un carré (#) (_hashtag_) avant la chaîne caractères qui sera utilisée comme en-tête.
+Ajoutez un carré (`#`) (_hashtag_) avant la chaîne caractères qui sera utilisée comme en-tête.
 
 - Exemple :
 
@@ -105,7 +107,7 @@ Ajoutez un carré (#) (_hashtag_) avant la chaîne caractères qui sera utilisé
 
 #### Méthode 2
 
-Ajoutez un signe égal (=) en dessous de la chaîne caractères qui sera utilisée comme en-tête (retour de chariot).
+Ajoutez un signe égal (`=`) en dessous de la chaîne caractères qui sera utilisée comme en-tête (retour de chariot).
 
 ```
 = : En-tête niveau 1 
@@ -124,13 +126,13 @@ Commencez la ligne avec un point d'exclamation (`!`) suivi d'une description ent
 
 - Exemple :
 
-```txt
+```
  ![Markdown Logo](./markdown.jpg)
 ```
 
 - Rendu :
   
- ![Markdown Logo](./markdown.png)
+ ![Markdown Logo](/media/markdown.png)
 
 #### Images du web
 
@@ -146,7 +148,7 @@ Le procédé est le même que pour une image interne.
 
 Dans Git, il est possible d'ajouter des liens vers d'autres pages du dépôt de fichiers.
 
-Incérer une description entre crochets (`[ ]`) et ajouter l'emplacement du ficher entre parenthèeses (`( )`).
+Insérez une description entre crochets (`[ ]`) et ajoutez l'emplacement du ficher entre parenthèeses (`( )`).
 
 - Exemple :
 
@@ -160,27 +162,33 @@ Incérer une description entre crochets (`[ ]`) et ajouter l'emplacement du fich
 
 #### Liens de référence
 
-Les liens de références permettent d'Insérez des liens numérotés (ou tout autre signe ou chaîne de caractères) pour ajouter une référence à une citation ou renvoyer à un contenu web ou interne.
+Les liens de références permettent d'insérer des liens numérotés (ou tout autre signe ou chaîne de caractères) pour ajouter une référence à une citation ou renvoyer à un contenu web ou interne.
 
-Après la chaîne de caractères à référencer, ajouter une suite de chiffres (des lettres ou un mot clé) entre crochets (`[ ]`) suivi du numéro de la référence entre crochets (`[ ]`).
+1. Après la chaîne de caractères à référencer, ajoutez une suite de chiffres (des lettres ou un mot clé) entre crochets (`[ ]`) suivi du numéro d'un accent grave (`[ ^]`).
 
-Ajouter la référence (lien vers une page web) après son numéro entre crochets (`[ ]`) suivi d'un deux points [`:`] à la fin du document 
+2. Ajoutez la référence (lien vers une page web) après son numéro entre crochets (`[ ]`) suivi d'un deux points [`:`] à la fin du document 
 
 - Exemple :
 
 ```
 # Insertion des liens
 
-[1][1]
-[2][2]
-[3][3]
+[1^]
+[2^]
+[3^]
 
-[A][1]
-[A][2]
+[A^]
+[B^]
 
-[ref][1]
-[ref][2]
+[ref1^]
+[ref2^]
 ```
+
+- Exemple :
+
+[^1]
+[^2]
+[^3]
 
 ```
 # Ajout des références au bas du document.
@@ -190,11 +198,7 @@ Ajouter la référence (lien vers une page web) après son numéro entre crochet
 [3]:https://commvault.com
 ```
 
-- Exemple
 
-[^1]
-[^2]
-[^3]
 
 #### Liens web
 
@@ -208,7 +212,7 @@ Les liens webs peuvent être insérés en ajoutant une description entre crochet
 
 #### Liens web direct
 
-Les liens web peuvent être insérés directement dans un document lorsqu'ils sont entre les marqueures de relation "plus petit que" et "plus grand que".
+Les liens web peuvent être insérés directement dans un document lorsqu'ils sont entre les marqueures de relation "plus petit que" (`<`) et "plus grand que" (`>`).
 
 - Exemple :
 
@@ -216,7 +220,7 @@ Les liens web peuvent être insérés directement dans un document lorsqu'ils so
 
 ## Lignes horizontales
 
-Insérez trois tirets au début d'une ligne `---` et une ligne horizontale apparaîtra en mode aperçu (_preview_).
+Insérez trois tirets au début d'une ligne (`---`) et une ligne horizontale apparaîtra en mode aperçu (_preview_).
 
 > Il est également possible d'utiliser trois tirets bas.
 
@@ -232,21 +236,21 @@ Insérez trois tirets au début d'une ligne `---` et une ligne horizontale appar
 
 ### Littéral
 
-Utiliser la barre oblique inversée (_backslash_) comme caractère d'échappement avant un caractère réservé comme un accent grave (\`).
+Si vous devez écrire un caractère réservé comme `* ou -`, utilisez la barre oblique inversée (_backslash_) comme caractère d'échappement avant.
 
 ```
-` \` 
-```
-
 ` \*` 
+```
+
+\*
 
 ### Listes
 
 #### Listes à puces
 
-Insérez un tiret au début d'une ligne et poursuivre avec la chaîne de caractères.
+Insérez un tiret au début d'une ligne et poursuivre avec la chaîne de caractères. Pour ajouter un sous-niveau de puces, ajoutez une espace avant le tiret.
 
-> Il est également possible d'utiliser un astérisque `*` au lieu du tiret.
+> Il est également possible d'utiliser un astérisque (`*`) au lieu du tiret.
 
 - Exemple :
 
@@ -267,7 +271,7 @@ Insérez un tiret au début d'une ligne et poursuivre avec la chaîne de caract�
 
 #### Listes numérotées
 
-Commencer une ligne avec le chiffre 1 suivi d'un point `1.` et faire un retour de chariot pour que les lignes suivantes se numérotent automatiquement.
+Commencez une ligne avec le chiffre 1 suivi d'un point (`1.`) et faire un retour de chariot pour que les lignes suivantes se numérotent automatiquement.
 
 - Exemple :
 
@@ -287,9 +291,9 @@ Commencer une ligne avec le chiffre 1 suivi d'un point `1.` et faire un retour d
 
 #### Gras
 
-Insérez un tiret bas (_underscore_) (_ _) au début et à la fin de la chaîne de caractères.
+Insérez un tiret bas (_underscore_) (`_ _`) au début et à la fin de la chaîne de caractères.
 
-> Il est également possible d'utiliser un astérisque `*` au lieu du tiret.
+> Il est également possible d'utiliser un astérisque (`*`) au lieu du tiret.
 
 ```
 __ABC__
@@ -303,7 +307,7 @@ __ABC__
 
 #### Italique
 
-Insérez un double tiret bas (_underscore_) (__ __) au début et à la fin de la châne de caractères.
+Insérez un double tiret bas (_underscore_) (`__ __`) au début et à la fin de la châne de caractères.
 
 > Il est également possible d'utiliser un astérisque `*` au lieu du tiret.
 
@@ -319,11 +323,11 @@ _ABC_
 
 ## Tableaux
 
-Commencer par définir des colonnes par des chaînes de caractères suivies d'une barre verticale. 
+Commencez par définir des colonnes par des chaînes de caractères suivies d'une barre verticale (`|`). 
 
-Faire un retour de chariot et ajouter des tirets sous chaque nom de colonne suivis d'une barre verticale pour définir les rangées (le nombre de tiret n'a pas d'importance).
+Faites un retour de chariot et ajoutez des tirets __(-)__ sous chaque nom de colonne suivis d'une barre verticale (`|`) pour définir les rangées (le nombre de tiret n'a pas d'importance).
 
-Pour chaque champ, entrer une chaîne caractère pour le contenu, séparé d'une barre verticale comme pour définir les colonnes.
+Pour chaque champ, entrez une chaîne caractère pour le contenu, séparée d'une barre verticale (`|`) comme pour définir les colonnes.
 
 Il n'est pas nécessaire de fermer le dernier élément avec une barre verticale.
 
@@ -345,13 +349,14 @@ Contenu 4 | Contenu 5 | Contenu 6
 
 ### Tables des matières
 
-La fonctionnalité "table des matières" (`TOC`) n'est pas supportée par tous les éditeurs de texte.
+La fonctionnalité "table des matières" (`TOC`) n'est pas supportée par tous les éditeurs de texte et les plateformes web comme GitHub et GitLab.
 
 Pour l'utiliser, ajouter `_TOC_` enter tirets bas à l'intérieur d'une paire de crochets (`[[ ]]`).
 
 ```
 [[_TOC_]] 
 ```
+Dans GitHub, vous trouverez un bouton qui permet d'afficher une table des matières à droite du texte.
 
 ## Annexes
 
@@ -368,7 +373,7 @@ Référer à un fichier sur une autre branche | (/../documents/textes/test.md)
 
 ### Référer à une section d'un autre fichier
 
-Ajouter un carré immédiatement après le lien du fichier et ajouter le nom de la section.
+Ajoutez un carré immédiatement après le lien du fichier et ajouter le nom de la section.
 
 ```
  [lien](./test.md#Section1) 
